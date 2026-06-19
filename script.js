@@ -22,3 +22,24 @@ fetch(URL_API)
     .catch(erro => {
         console.error("Erro:", erro);
     });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    // abre imagem
+    document.getElementById("galeria").addEventListener("click", (e) => {
+        if (e.target.tagName === "IMG") {
+            lightbox.classList.add("active");
+            lightboxImg.src = e.target.src;
+        }
+    });
+
+    // fecha imagem
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+        lightboxImg.src = "";
+    });
+
+});

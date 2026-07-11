@@ -1,20 +1,21 @@
-const URL_API = "https://script.google.com/macros/s/AKfycbxuXsguovjfys72AmnncnvFGyr_Kj0oHArPwpMQKsd-2Ej_LnEniQfKp7z-NRr9c6P2pA/exec";
+const URL_API = "https://script.google.com/macros/s/AKfycbyQDOm4KKoUUTA3HUBA_AOe46zS1rqMdQWQbuoOZB9saoWRSxtZUeatEZO59oLTsxoJDw/exec";
 let todosParticipantes = [];
 let participantesFiltrados = [];
 let indiceAtual = 0;
+let versaoAtual = "2.7"; // versão selecionada por padrão
 
 document.addEventListener("DOMContentLoaded", () => {
     const galeria = document.getElementById("galeria");
     const inputBusca = document.querySelector(".search-box input");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
+    const botoesFiltro = document.querySelectorAll(".filter-btn");
 
     fetch(URL_API)
         .then(response => response.json())
         .then(participantes => {
             todosParticipantes = participantes;
-            participantesFiltrados = [...todosParticipantes];
-            renderizarCards(participantesFiltrados);
+            aplicarFiltros();
         })
         .catch(erro => {
             console.error("Erro ao carregar participantes:", erro);
@@ -39,14 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
         galeria.innerHTML = cardsHTML;
     }
 
-    inputBusca.addEventListener("input", () => {
+    // Aplica o filtro de versão + busca por nome ao mesmo tempo
+    function aplicarFiltros() {
         const termoPesquisa = inputBusca.value.toLowerCase().trim();
-        
+
         participantesFiltrados = todosParticipantes.filter(pessoa => {
-            return pessoa.nome && pessoa.nome.toLowerCase().includes(termoPesquisa);
+            const bateVersao = pessoa.versao === versaoAtual;
+            const bateNome = !termoPesquisa || (pessoa.nome && pessoa.nome.toLowerCase().includes(termoPesquisa));
+            return bateVersao && bateNome;
         });
 
         renderizarCards(participantesFiltrados);
+    }
+
+    inputBusca.addEventListener("input", () => {
+        aplicarFiltros();
+    });
+
+    botoesFiltro.forEach(btn => {
+        btn.addEventListener("click", () => {
+            botoesFiltro.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            versaoAtual = btn.dataset.filter;
+            aplicarFiltros();
+        });
     });
 
     function mudarFoto(direcao) {

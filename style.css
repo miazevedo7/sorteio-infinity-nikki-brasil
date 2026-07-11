@@ -8,21 +8,21 @@
 body {
     min-height: 100vh;
     background: 
-        radial-gradient(circle at 50% 0%, rgba(146, 74, 191, 0.6) 0%, rgba(53, 55, 157, 0) 75%),
+        radial-gradient(circle at 50% 0%, rgba(236, 195, 150, 0.28) 0%, rgba(90, 67, 22, 0.55) 75%),
         linear-gradient(
             to bottom, 
-            rgba(146, 74, 191, 0.2) 0%,   
-            rgba(53, 55, 157, 0.4) 25%,   
-            rgba(11, 31, 116, 0.6) 50%,   
-            rgba(1, 9, 82, 0.8) 75%,      
-            rgba(1, 10, 64, 0.95) 100%    
+            rgba(232, 200, 106, 0.18) 0%,
+            rgba(191, 151, 48, 0.28) 25%,
+            rgba(90, 67, 22, 0.55) 50%,
+            rgba(34, 27, 20, 0.82) 75%,
+            rgba(13, 11, 8, 0.96) 100%   
         ),
-        url("fundo-compr.png");
+        url("background-2-8-2.png");
     background-size: auto, auto, cover;
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #010A40; 
+    background-color: #0D0B08; 
     color: white;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .btn-sorteio {
-    background: linear-gradient(135deg, #8a4bee, #5345b5);
+    background: linear-gradient(135deg, #D9A86C, #987557);
     color: white;
     border: none;
     padding: 10px 22px;
@@ -64,7 +64,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    box-shadow: 0 4px 15px rgba(138, 75, 238, 0.3);
+    box-shadow: 0 4px 15px rgba(217, 168, 108, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -74,7 +74,7 @@ html {
 
 .btn-sorteio-link {
     display: inline-block;
-    background: linear-gradient(135deg, #8a4bee, #5345b5);
+    background: linear-gradient(135deg, #D9A86C, #987557);
     color: white !important;
     text-decoration: none;
     padding: 10px 22px;
@@ -82,13 +82,13 @@ html {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    box-shadow: 0 4px 15px rgba(138, 75, 238, 0.3);
+    box-shadow: 0 4px 15px rgba(217, 168, 108, 0.3);
     transition: all 0.3s ease;
 }
 
 .btn-sorteio-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(138, 75, 238, 0.5);
+    box-shadow: 0 6px 20px rgba(217, 168, 108, 0.5);
 }
 
 .whatsapp-section {
@@ -174,14 +174,14 @@ html {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #bca3ff;
+    color: #D9A86C;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
 .about-header h2 {
     font-size: 32px;
-    background: linear-gradient(to bottom, #ffffff, #e2caff);
+    background: linear-gradient(to bottom, #ffffff, #F2E1C2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -202,7 +202,7 @@ html {
 
 .about-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(146, 74, 191, 0.3);
+    border-color: rgba(152, 117, 87, 0.3);
 }
 
 .about-card h3 {
@@ -220,7 +220,7 @@ html {
 }
 
 .about-card strong {
-    color: #e2caff;
+    color: #F2E1C2;
     font-weight: 600;
 }
 
@@ -238,7 +238,7 @@ html {
 .hero h1 {
     font-size: 56px;
     font-weight: 700;
-    background: linear-gradient(to bottom, #ffffff 60%, #bca3ff 100%);
+    background: linear-gradient(to bottom, #ffffff 60%, #D9A86C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
@@ -249,9 +249,9 @@ html {
     margin: 15px 0;
     padding: 6px 24px;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(146, 74, 191, 0.6), rgba(53, 55, 157, 0.6));
+    background: linear-gradient(135deg, rgba(152, 117, 87, 0.6), rgba(38, 38, 38, 0.6));
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #e2caff;
+    color: #F2E1C2;
     font-weight: 600;
     font-size: 14px;
 }
@@ -264,7 +264,7 @@ html {
 
 .sorteio-info-panel {
     display: flex;
-    background: linear-gradient(135deg, rgba(146, 74, 191, 0.05), rgba(11, 31, 116, 0.15));
+    background: linear-gradient(135deg, rgba(152, 117, 87, 0.05), rgba(38, 38, 38, 0.15));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -290,7 +290,7 @@ html {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #bca3ff;
+    color: #D9A86C;
     font-weight: 700;
     display: block;
     margin-bottom: 2px;
@@ -340,7 +340,7 @@ html {
 .premio-itens {
     display: block;
     font-size: 11px;
-    color: #bca3ff;
+    color: #D9A86C;
     margin-top: 2px;
 }
 
@@ -375,7 +375,7 @@ html {
 }
 
 .status-text strong {
-    color: #bca3ff;
+    color: #D9A86C;
 }
 
 .status-subtext {
@@ -409,7 +409,7 @@ html {
 }
 
 .search-box input:focus {
-    border-color: #924ABF;
+    border-color: #987557;
 }
 
 .filter-buttons {
@@ -433,7 +433,7 @@ html {
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background: #6346eb;
+    background: #D9A86C;
     color: white;
 }
 
@@ -522,8 +522,8 @@ footer {
 }
 
 .credits a:hover {
-    color: #bca3ff;
-    text-shadow: 0 0 8px rgba(188, 163, 255, 0.6);
+    color: #D9A86C;
+    text-shadow: 0 0 8px rgba(217, 168, 108, 0.6);
 }
 
 .lightbox {
@@ -729,7 +729,7 @@ footer {
 }
 
 .lightbox-btn:hover {
-    background: rgba(138, 75, 238, 0.8);
+    background: rgba(217, 168, 108, 0.8);
     transform: translateY(-50%) scale(1.1);
 }
 

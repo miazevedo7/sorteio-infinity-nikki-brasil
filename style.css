@@ -813,20 +813,20 @@ footer {
 
 /* Engrenagem 6 */
 .gear6 {
-    width: 200px;
-    height: 200px;
-    bottom: 250px;
-    left: 8%;
+    width: 120px;
+    height: 120px;
+    top: 500px;
+    left: 50%;
     background-image: url("engrenagem (6).png");
     animation: rotateCounter 50s linear infinite;
 }
 
 /* Engrenagem 7 */
 .gear7 {
-    width: 120px;
-    height: 120px;
-    top: 500px;
-    left: 50%;
+    width: 200px;
+    height: 200px;
+    bottom: 250px;
+    left: 8%;
     background-image: url("engrenagem (7).png");
     animation: rotateClockwise 20s linear infinite;
 }
